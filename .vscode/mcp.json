@@ -1,0 +1,27 @@
+{
+  "servers": {
+    "custom-brave-searchh": {
+      "command": "node",
+      "args": [
+        "./node_modules/@modelcontextprotocol/server-brave-search/dist/index.js"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "<YOUR_BRAVE_API_KEY_HERE>" // Replace with your actual API key
+      }
+    },
+    "custom-puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    },
+    "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git"]
+    },
+    "custom-time": {
+        "command": "uvx",
+        "args": [
+            "mcp-server-time"
+        ]
+    }
+  }
+}
